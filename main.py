@@ -1,6 +1,15 @@
-myset1 = set(map(int, input().split()))
-myset2 = set(map(int, input().split()))
-myset3 = set(map(int, input().split()))
-all_grade = myset1 | myset2
-result = myset3-all_grade
-print(*sorted(result)[::-1])
+def sq(x):
+    return x**2
+
+n = input()
+m = input()
+s = {}
+s1 = {}
+for i in range(len(n)):
+    s[n[i]] = s.get(n[i],0)+1
+for i in range(len(m)):
+    s1[m[i]] = s1.get(m[i],0)+1
+if s == s1:
+    print('YES')
+else:
+    print('NO')
